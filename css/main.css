@@ -108,6 +108,9 @@ header .mobile-nav button {
   color: #001766;
   margin-left: 10px;
 }
+header .mobile-nav button.lang {
+  font-weight: 600;
+}
 header .hamburger {
   padding: 0 8px;
 }

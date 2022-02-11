@@ -5,7 +5,7 @@
 @color-bg: #f0f5fb;
 @color-second: #66001d;
 @brd-radius: 9px;
-@height-head: 96px;
+@height-head: 63px;
 @height-nav: 106px;
 @w-container: 960px;
 
@@ -14,9 +14,10 @@ header {
     .box-logo {
         width: auto; display: flex;
 
+        .logo {min-width: 180px;}
         .title {
-            position: relative; padding: 10px 0 0 80px;
-            display: block;
+            position: relative; padding: 26px 0 0 80px;
+            display: block; margin-left: 30px;
 
             &::before, &::after {
                 display: block; 
@@ -77,7 +78,11 @@ main {
 }
 
 @media (min-width:1550px) {
+    @height-head: 96px;
     @w-container: 1532px;
+
+    body {padding: @height-head + @height-nav 0 0;}
+    header {height: @height-head;}
 
     main {
         margin-left: calc((100vw - @w-container) / 2);
