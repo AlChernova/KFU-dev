@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'getvoip_grotesque';
+    src: url('../fonts/getvoip_grotesque-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaneuecyr_Light';
+    src: url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../fonts/GothamPro.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../fonts/GothamPro-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../fonts/GothamPro-Medium.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../fonts/GothamPro-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../fonts/GothamPro-Black.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'GothamPro', sans-serif;font-weight: 300;
+}
+.light {font-weight: 200;}
+.regular {}
+.medium {font-weight: 400;}
+.bold {font-weight: 500;}
+.black {font-weight: 700;}
