@@ -130,4 +130,21 @@ main section > .block .container {
     width: 100%;
     padding-right: 60px;
   }
+  .box-nav {
+    top: 96px;
+  }
+  .box-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .box-nav .container nav {
+    order: 0;
+  }
+  .box-nav .container nav ul {
+    display: flex;
+  }
+  .box-nav .container .box-auth {
+    order: 1;
+  }
 }

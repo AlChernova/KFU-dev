@@ -115,5 +115,24 @@ main {
 
                 .container {width: 100%; padding-right: 60px;}
             }
+    }
+    .box-nav {
+        top: @height-head;
+        
+        .container {
+            display: flex; justify-content: space-between;
+            align-items: center;
+            nav {
+                order: 0;
+
+                ul {
+                    display: flex;
+                }
+            }
+            .box-auth {
+                order: 1;
+            }
         }
+
+    }
 }
