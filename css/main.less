@@ -17,7 +17,15 @@
 @brd-radius: 9px;
 @height-head: 96px;
 @height-nav: 106px;
+@w-container: 100%;
 
+// mixins
+.white-block {
+    background: #fff; 
+    border-radius: @brd-radius 0 0 @brd-radius;
+}
+
+// main styles
 body {
     margin: 0; padding: @height-head + @height-nav 0 0;
     background: @color-bg;
@@ -32,7 +40,72 @@ body {
 header {
     position: fixed; top: 0; left: 0;
     width: 100%; height: @height-head;
+    background: @color-primary;
+    color: #fff; font-size: 13px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        height: 100%;
+    }
+    .container:before,.container:after {display: none;}
 }
 .box-nav {
-    height: @height-nav;
+    position: fixed; top: @height-head; left: 0;
+    width: 100%; height: @height-nav;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        height: 100%;
+    }
+    .container:before,.container:after {display: none;}
+}
+main > section {
+    margin-bottom: 25px;
+
+    .block {.white-block;}
+}
+@media (min-width:1000px){
+    @w-container: 960px;
+
+    main {
+        margin-left: calc((100vw - @w-container) / 2);
+
+        section > .block {
+                padding: 50px calc((100vw - @w-container) / 2) 50px 30px;
+
+                .container {width: 100%; padding-right: 30px;}
+            }
+        }
+
+}
+@media (min-width:1300px){
+    @w-container:1200px;
+    
+    main {
+        margin-left: calc((100vw - @w-container) / 2);
+
+        section > .block {
+                padding: 50px calc((100vw - @w-container) / 2) 50px 66px;
+
+                .container {width: 100%; padding-right: 60px;}
+            }
+        }
+}
+
+@media (min-width:1550px) {
+    @w-container: 1532px;
+
+    main {
+        margin-left: calc((100vw - @w-container) / 2);
+
+        section > .block {
+                padding: 50px calc((100vw - @w-container) / 2) 50px 66px;
+
+                .container {width: 100%; padding-right: 60px;}
+            }
+        }
 }
