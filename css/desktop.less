@@ -1,9 +1,56 @@
+@font-primary: 'GothamPro';
+@color-primary: #001766;
+@color-text: #525252;
+@color-Hh: #1f1f1f;
+@color-bg: #f0f5fb;
+@color-second: #66001d;
+@brd-radius: 9px;
 @height-head: 96px;
 @height-nav: 106px;
 @w-container: 960px;
 
 body {padding: @height-head + @height-nav 0 0;}
-header .mobile-nav button:not(.lang) {display: none;}
+header {
+    .box-logo {
+        width: auto; display: flex;
+
+        .title {
+            position: relative; padding: 10px 0 0 80px;
+            display: block;
+
+            &::before, &::after {
+                display: block; 
+                position: absolute; top: 0; left: 0;
+                width: 59px; height: 50px;
+                color: @color-Hh; text-align: center; 
+                font-weight: 800;
+            }
+            &::before {
+                content: "10";
+                padding-top: 8px;
+                background: #fff; 
+                border-radius: 0 0 10px 10px;
+                font-size: 20px;
+            }
+            &::after {
+                content: "ТОП";
+                padding-top: 30px; font-size: 10px;
+            }
+        }
+    }
+    .box-contact {
+        position: static; display: flex;
+        justify-content: flex-end; align-items: center;
+        background: none; padding: 0;
+        color: #fff; font-size: 90%;
+
+        a {color: #fff;}
+
+        p {margin-right: 30px;}
+    }
+
+    .mobile-nav button:not(.lang) {display: none;}
+}
 main {
     margin-left: calc((100vw - @w-container) / 2);
 
