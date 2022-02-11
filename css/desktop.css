@@ -166,6 +166,18 @@ main section > .block .container {
     border-bottom: 2px solid #001766;
     color: #001766;
   }
+  .box-nav .container nav > ul > li.has_level2 > a {
+    position: relative;
+  }
+  .box-nav .container nav > ul > li.has_level2 > a:after {
+    display: block;
+    content: ">";
+    position: absolute;
+    right: 0;
+    top: 17px;
+    transform: rotate(90deg) scaleX(0.7);
+    font-weight: 300;
+  }
   .box-nav .container nav > ul ul {
     position: absolute;
     top: calc(100% - 20px);
@@ -181,6 +193,18 @@ main section > .block .container {
   .box-nav .container nav > ul ul > li {
     width: 50%;
     padding: 1em 60px 1em 20px;
+    position: relative;
+  }
+  .box-nav .container nav > ul ul > li::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 2em;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #525252;
   }
   .box-nav .container nav > ul ul > li a {
     font-size: 12px;
