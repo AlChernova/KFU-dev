@@ -13,7 +13,7 @@ body {padding: @height-head + @height-nav 0 0;}
 header {
     .box-logo {
         width: auto; display: flex;
-
+        
         .logo {min-width: 180px;}
         .title {
             position: relative; padding: 26px 0 0 80px;
@@ -82,8 +82,31 @@ main {
     @w-container: 1532px;
 
     body {padding: @height-head + @height-nav 0 0;}
-    header {height: @height-head;}
-
+    header {
+        height: @height-head;
+        .box-logo {
+            .logo {
+                min-width: 315px;
+                a {
+                    padding: 30px 0 0 100px; font-size: 12px;
+                    line-height: 1.5em;
+                    
+                    &::after {
+                        width: 70px; height: 85px;
+                    }
+                }
+            }
+            .title {
+                padding: 40px 0 0 100px;
+                &::after,
+                &::before {width: 80px; height: 81px;}
+                &::before {font-size: 28px; padding-top: 15px;} 
+                &::after {font-size: 14px; padding-top: 48px;} 
+            }
+        }
+        .box-contact {padding-top: 22px;}
+        .mobile-nav {margin-top: 28px;}
+    }
     main {
         margin-left: calc((100vw - @w-container) / 2);
 

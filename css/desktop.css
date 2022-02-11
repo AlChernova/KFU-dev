@@ -86,6 +86,40 @@ main section > .block .container {
   header {
     height: 96px;
   }
+  header .box-logo .logo {
+    min-width: 315px;
+  }
+  header .box-logo .logo a {
+    padding: 30px 0 0 100px;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  header .box-logo .logo a::after {
+    width: 70px;
+    height: 85px;
+  }
+  header .box-logo .title {
+    padding: 40px 0 0 100px;
+  }
+  header .box-logo .title::after,
+  header .box-logo .title::before {
+    width: 80px;
+    height: 81px;
+  }
+  header .box-logo .title::before {
+    font-size: 28px;
+    padding-top: 15px;
+  }
+  header .box-logo .title::after {
+    font-size: 14px;
+    padding-top: 48px;
+  }
+  header .box-contact {
+    padding-top: 22px;
+  }
+  header .mobile-nav {
+    margin-top: 28px;
+  }
   main {
     margin-left: calc((100vw - 1532px) / 2);
   }

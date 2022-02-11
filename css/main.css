@@ -17,8 +17,8 @@ body {
   margin: 0;
   padding: 63px 0 0;
   background: #f0f5fb;
-  font-family: 'GothamPro', 'Montserrat', Verdana, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'GothamPro', Verdana, Arial, sans-serif;
+  font-weight: 300;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -91,7 +91,7 @@ header .box-contact {
 }
 header .box-contact a {
   font-size: 120%;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
 }
 header .mobile-nav {
@@ -109,7 +109,7 @@ header .mobile-nav button {
   margin-left: 10px;
 }
 header .mobile-nav button.lang {
-  font-weight: 600;
+  font-weight: 400;
 }
 header .hamburger {
   padding: 0 8px;
