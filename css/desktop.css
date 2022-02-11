@@ -1,0 +1,37 @@
+body {
+  padding: 202px 0 0;
+}
+main {
+  margin-left: calc((100vw - 960px) / 2);
+}
+main section > .block {
+  padding: 50px calc((100vw - 960px) / 2) 50px 30px;
+}
+main section > .block .container {
+  width: 100%;
+  padding-right: 30px;
+}
+@media (min-width: 1300px) {
+  main {
+    margin-left: calc((100vw - 1200px) / 2);
+  }
+  main section > .block {
+    padding: 50px calc((100vw - 1200px) / 2) 50px 66px;
+  }
+  main section > .block .container {
+    width: 100%;
+    padding-right: 60px;
+  }
+}
+@media (min-width: 1550px) {
+  main {
+    margin-left: calc((100vw - 1532px) / 2);
+  }
+  main section > .block {
+    padding: 50px calc((100vw - 1532px) / 2) 50px 66px;
+  }
+  main section > .block .container {
+    width: 100%;
+    padding-right: 60px;
+  }
+}
