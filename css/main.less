@@ -242,7 +242,7 @@ main {
         li {
             position: relative; margin-left: 0; padding-left: 1.5em;
             
-            &::::before {
+            &::before {
                 position:absolute;
                 display:block;
                 content: "—";
@@ -259,6 +259,12 @@ main {
     section h2 {padding: 0 20px;}
 
     /* инд. блоки на главной */
+    .index_caption .block {
+        background: url(../pictures/img_about.jpg) #fff no-repeat 0 0; background-size: 100% auto;
+        padding-top: 60vw;
+
+        .container {box-shadow: 0 -30px 30px #fff; background: #fff;}
+    }
     .index_spectr {
         .slider {
             .item img {width: 100%; max-width: 100%;}

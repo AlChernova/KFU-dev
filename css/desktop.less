@@ -19,7 +19,7 @@
 
 body {padding: @height-head + @height-nav 0 0;}
 h1, h2, h3, h4 {line-height: 1.5em;}
-h1 {font-size: 48px;}
+h1 {font-size: 40px;}
 h2 {font-size: 38px;}
 h3 {font-size: 28px;}
 
@@ -81,6 +81,13 @@ main {
         .col-xs-12:last-child {
             padding-left: 20px;
         }
+    }
+    .index_caption .block {
+        background-position: 100% 0;
+        background-size: auto 100%;
+        padding-top: 50px;
+        
+        .container {background: none; box-shadow: none;}
     }
 }
 
@@ -235,6 +242,7 @@ main {
     @w-container: 1532px;
 
     body {padding: @height-head + @height-nav 0 0;}
+    h1 {font-size: 48px;}
     header {
         height: @height-head;
         .box-logo {
