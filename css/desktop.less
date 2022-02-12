@@ -72,8 +72,17 @@ main {
             padding: 50px calc((100vw - @w-container) / 2) 50px 30px;
 
             .container {width: 100%; padding-right: 30px;}
+    }
+    /* инд. блоки на главной */
+    .index_spectr {
+        .col-xs-12:first-child {
+            padding-right: 20px;
+        }
+        .col-xs-12:last-child {
+            padding-left: 20px;
         }
     }
+}
 
 
 @media (min-width:1300px){
@@ -81,7 +90,7 @@ main {
     
     .box-nav {
         top: @height-head; padding: 28px 0 0 0;
-        background: @color-bg;
+        background: @color-bg; height: @height-nav;
         
         
         .container {
@@ -211,6 +220,12 @@ main {
         }
 
         section h2 {padding: 0 160px;}
+    /* инд. блоки на главной */
+        .index_spectr {
+            .col-xs-12:first-child {
+                padding-right: 50px;
+            }
+        }
     }
 
 }
@@ -255,6 +270,8 @@ main {
                 padding: 50px calc((100vw - @w-container) / 2) 50px 66px;
 
                 .container {width: 100%; padding-right: 60px;}
-            }
+        }
+
+        section > h2 {margin: 2em 0 1em;}
     }
 }

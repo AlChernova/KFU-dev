@@ -226,6 +226,12 @@ header {
         }
     }
 }
+footer {
+    background: @color-primary;
+    color:#fff;
+
+    a {color: #cdcccc; text-decoration: none;}
+}
 main {
     line-height: 1.5em; flex-grow: 1;
 
@@ -248,19 +254,12 @@ main {
     & > section {
         margin-bottom: 25px; padding: 0 0 0 20px;     
     
-        .block {.white-block;}
+        .block {.white-block; padding-bottom: 30px;}
     }
     section h2 {padding: 0 20px;}
 
     /* инд. блоки на главной */
     .index_spectr {
-        .col-xs-12:first-child {
-            padding-right: 50px;
-        }
-        .col-xs-12:last-child {
-            padding-left: 20px;
-        }
-
         .slider {
             .item img {width: 100%; max-width: 100%;}
         }
