@@ -114,12 +114,13 @@ header {
 
 .box-nav {
     position: fixed; top: @height-head; left: 0;
-    width: 100%;
+    width: 100%; 
 }
 @media (max-width: 600px) {
     .box-nav {
         position: fixed; top: @height-head; left: 0;
-        width: 100%; padding: 1.5em 0;
+        width: 100%; max-width: 360px; height: calc(100vh - @height-head);
+        overflow: auto; padding: 1.5em 0;
         .bxshad; background: #fff; 
     
     }
@@ -148,10 +149,16 @@ header {
         }
         & > ul > li.has_level2 > a::before {
             .afbf-decor;
-            content: ">"; right: 0; top: 0; height: 2em; width: 2em;
+            content: ">"; right: 0; top: -6px; height: 26px; width: 26px;
             background: @color-bg; border-radius: 50%;
-            transform: rotate(90deg) scaleX(0.7);
             font-weight: 300;
+            text-align: center; line-height: 26px;
+        }
+        & > ul > li ul {
+            display: none;
+            padding-left: 20px; margin-top: 0.5em;
+
+            & ul {font-size: 0.8rem;}
         }
     } 
 }
