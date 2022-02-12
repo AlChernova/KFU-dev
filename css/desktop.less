@@ -153,7 +153,7 @@ main {
                             }
                         }
                     } 
-
+                    /* nav level 2 */
                     ul {
                         //display: none;
                         position: absolute; top: calc(100% - 20px);
@@ -169,13 +169,21 @@ main {
 
                             &::after {
                                 display: block; content: "";
-                                position: absolute; top: 2em; left: 0;
+                                position: absolute; top: 1.55em; left: 0;
                                 width: 4px; height: 4px;
                                 border-radius: 50%; background: @color-text;
                             }
 
                             & a {
                                 font-size: 12px; color: @color-text;
+                            }
+                            &:last-child:first-child {width: 100%;}
+
+                            /* nav level 3 */
+                            & ul {
+                                z-index: 2; top: -20%; left: 90%; width: 100%;
+
+                                & li {width: auto;}
                             }
                         }
                     }
