@@ -28,8 +28,10 @@ button {border: none}
 .afbf-decor {display: block; content:""; position: absolute;}
 
 // main styles
+body, html {height: 100%;}
 body {
     margin: 0; padding: @height-head 0 0;
+    display: flex; flex-direction: column; flex: auto;
     background: @color-bg;
     font-family: @font-primary, Verdana, Arial, sans-serif;
     font-weight: 300; font-size: 16px;
@@ -45,14 +47,14 @@ a {
 
     &:hover {color: @color-second;}
 }
-h1, h2, h3, h4 {color: @color-Hh; line-height: 1.5em;}
-h1 {font-size: 48px; font-weight: 600; margin: 0 0 1em;}
-h2 {font-size: 38px; font-weight: 300; margin: 1em 0 0.5em;}
+h1, h2, h3, h4 {color: @color-Hh; line-height: 1.2em;}
+h1 {font-size: 1.5rem; font-weight: 600; margin: 0 0 1em;}
+h2 {font-size: 1.4rem; font-weight: 300; margin: 1em 0 0.5em;}
     h2 strong {font-weight: 500;}
-h3 {font-size: 28px; font-weight: 500; margin: 1em 0 0.5em;}
+h3 {font-size: 1.2rem; font-weight: 500; margin: 1em 0 0.5em;}
 
 header {
-    position: fixed; top: 0; left: 0;
+    position: fixed; top: 0; left: 0; z-index: 2;
     width: 100%; height: @height-head;
     background: @color-primary;
     color: #fff; font-size: 13px;
@@ -121,10 +123,11 @@ header {
 
 .box-nav {
     position: fixed; top: @height-head; left: 0;
-    width: 100%; 
+    width: 100%; z-index: 2;
 }
 @media (max-width: 600px) {
     .box-nav {
+        display: none;
         position: fixed; top: @height-head; left: 0;
         width: 100%; max-width: 360px; height: calc(100vh - @height-head);
         overflow: auto; padding: 1.5em 0;
@@ -224,7 +227,7 @@ header {
     }
 }
 main {
-    line-height: 1.5em;
+    line-height: 1.5em; flex-grow: 1;
 
     p {padding: 0; margin: 0.5em 0 1em;}
     ul {
@@ -243,12 +246,11 @@ main {
     }
 
     & > section {
-        margin-bottom: 25px;
-
-        h2 {padding-left: 160px;}
+        margin-bottom: 25px; padding: 0 0 0 20px;     
     
         .block {.white-block;}
     }
+    section h2 {padding: 0 20px;}
 
     /* инд. блоки на главной */
     .index_spectr {

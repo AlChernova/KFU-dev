@@ -18,6 +18,11 @@
 // end mixin
 
 body {padding: @height-head + @height-nav 0 0;}
+h1, h2, h3, h4 {line-height: 1.5em;}
+h1 {font-size: 48px;}
+h2 {font-size: 38px;}
+h3 {font-size: 28px;}
+
 header {
     .box-logo {
         width: auto; display: flex;
@@ -74,15 +79,6 @@ main {
 @media (min-width:1300px){
     @w-container:1200px;
     
-    main {
-        margin-left: calc((100vw - @w-container) / 2);
-
-        section > .block {
-                padding: 50px calc((100vw - @w-container) / 2) 50px 66px;
-
-                .container {width: 100%; padding-right: 60px;}
-            }
-        }
     .box-nav {
         top: @height-head; padding: 28px 0 0 0;
         background: @color-bg;
@@ -205,6 +201,18 @@ main {
     .box-nav .user_title .user_link button:hover {
         color: @color-primary;
     }
+    main {
+        margin-left: calc((100vw - @w-container) / 2);
+
+        section > .block {
+                padding: 50px calc((100vw - @w-container) / 2) 50px 66px;
+
+                .container {width: 100%; padding-right: 60px;}
+        }
+
+        section h2 {padding: 0 160px;}
+    }
+
 }
 
 @media (min-width:1550px) {
