@@ -45,6 +45,12 @@ a {
 
     &:hover {color: @color-second;}
 }
+h1, h2, h3, h4 {color: @color-Hh; line-height: 1.5em;}
+h1 {font-size: 48px; font-weight: 600; margin: 0 0 1em;}
+h2 {font-size: 38px; font-weight: 300; margin: 1em 0 0.5em;}
+    h2 strong {font-weight: 500;}
+h3 {font-size: 28px; font-weight: 500; margin: 1em 0 0.5em;}
+
 header {
     position: fixed; top: 0; left: 0;
     width: 100%; height: @height-head;
@@ -217,9 +223,45 @@ header {
         }
     }
 }
-main > section {
-    margin-bottom: 25px;
+main {
+    line-height: 1.5em;
 
-    .block {.white-block;}
+    p {padding: 0; margin: 0.5em 0 1em;}
+    ul {
+        list-style:none;
+        
+        li {
+            position: relative; margin-left: 0; padding-left: 1.5em;
+            
+            &::::before {
+                position:absolute;
+                display:block;
+                content: "—";
+                top: 0ex; left: 0;
+            }
+        }
+    }
+
+    & > section {
+        margin-bottom: 25px;
+
+        h2 {padding-left: 160px;}
+    
+        .block {.white-block;}
+    }
+
+    /* инд. блоки на главной */
+    .index_spectr {
+        .col-xs-12:first-child {
+            padding-right: 50px;
+        }
+        .col-xs-12:last-child {
+            padding-left: 20px;
+        }
+
+        .slider {
+            .item img {width: 100%; max-width: 100%;}
+        }
+    }
 }
 
