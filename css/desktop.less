@@ -3,7 +3,7 @@
 @color-text: #525252;
 @color-Hh: #1f1f1f;
 @color-bg: #f0f5fb;
-@color-second: #66001d;
+@color-second: #c00120;
 @brd-radius: 9px;
 @height-head: 63px;
 @height-nav: 106px;
@@ -136,6 +136,7 @@ main {
             &.slick-next {right: 20px;}
         }
     }
+    .index .item_teacher .title:hover {color: @color-second;} 
     /* program */
     .index .box-type-programms {
         padding-bottom: 0; padding-right: 20px;
@@ -147,6 +148,11 @@ main {
                 margin: 0 0 20px; padding: 1em;
 
                 button {width: 100%; text-align: left;}
+
+                &:hover {background: @color-primary; 
+                    
+                    button {color: #fff;}
+                }
             }
         }
     }
@@ -186,6 +192,7 @@ main {
 
         h3 {margin-top: 0; margin-bottom: 1.5em;}
     }
+    .index .news_list_chapter .item a:hover {color: @color-second;}
 
     .index .news-list {
         .item {
@@ -198,11 +205,10 @@ main {
             .content {
                 width: 60%; padding: 30px;
 
-                h4 {margin-top: 0;}
-                h4 a {color: @color-Hh; text-decoration: none;}
-
+                h4 a:hover {color: @color-second;}
                 .features {
                     .chapter {width: auto; margin-bottom: 0;}
+                    .chapter a:hover {color: @color-second;}
                 }
             }
         }
@@ -239,6 +245,8 @@ main {
                         display: block; padding: 17px 20px 40px;
                         font-weight: 500; font-size: 14px;
                         color: @color-Hh;
+
+                        &:hover {color: @color-primary;}
 
                         &.selected {
                             border-bottom: 2px solid @color-primary;

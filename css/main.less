@@ -14,7 +14,7 @@ button {border: none}
 @color-text: #525252;
 @color-Hh: #1f1f1f;
 @color-bg: #f0f5fb;
-@color-second: #66001d;
+@color-second: #c00120;
 @color-footlink: #cdcccc;
 @brd-radius: 9px;
 @height-head: 63px;
@@ -399,12 +399,9 @@ main {
             display: flex; flex-direction: column;
             padding: 1em;
             justify-content: space-between;
-            text-align: center; text-decoration: none;
+            text-align: center; text-decoration: none; color: @color-Hh; 
 
-            .name {
-                
-                font-weight: 700; color: @color-Hh; font-size: 110%;
-            }
+            .name {font-weight: 700; font-size: 110%;}
             .position {
                 flex-grow: 1; padding-top: 1.5em;
                 font-size: 90%; color: @color-text;
@@ -465,6 +462,8 @@ main {
             .content {
                 padding: 20px;
 
+                h4 {margin-top: 0;}
+                h4 a {color: @color-Hh; text-decoration: none;}
                 .descr {font-size: 85%;}
                 .features {
                     display: flex; font-size: 0.75rem;
