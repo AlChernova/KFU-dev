@@ -25,6 +25,9 @@ button {border: none}
     background: #fff; 
     border-radius: @brd-radius 0 0 @brd-radius;
 }
+.block-light {
+    background: @color-bg; border-radius: @brd-radius;
+}
 .bxshad() {box-shadow: 0 10px 13px rgba(0,52,169,0.13);}
 .afbf-decor() {display: block; content:""; position: absolute;}
 
@@ -382,8 +385,8 @@ main {
     }
     .index .item_teacher {
         height: 430px; display: flex; flex-direction: column;
-        justify-content: space-between; background: @color-bg;
-        border-radius: @brd-radius;
+        justify-content: space-between; 
+        .block-light;
         // width: 260px;
 
         .img {
@@ -418,8 +421,7 @@ main {
             li { 
                 display: flex;
                 padding: 0.5em 1em; margin: 0 20px 0 0;
-                background: @color-bg;
-                border-radius: @brd-radius;
+                .block-light;
                 transition: background-color 0.2s ease;
 
                 &::before {display: none;}
@@ -440,7 +442,7 @@ main {
         
     }
     .index .item-program {
-        background: @color-bg; border-radius: @brd-radius;
+        .block-light;
         margin-top: 30px;
 
         .img {display: none;}
@@ -453,11 +455,11 @@ main {
             a {text-decoration: none; font-weight: 500;}
         }
     }
-    .index.news-list {
+    .index .news-list {
         .item {
             display: flex; justify-content: space-between; align-items: stretch;
-            position: relative; background: @color-bg; border-radius: @brd-radius;
-            margin-bottom: 30px;
+            position: relative; margin-bottom: 30px;
+            .block-light;
 
             .img {display: none}
             .content {
@@ -482,6 +484,23 @@ main {
 
         }
     }
+    .index .box-news_list_chapter {
+        .block-light;
+        padding: 20px; margin-top: 30px;
+        
+        h3 {color: @color-text;}
+    }
+    .index .news_list_chapter {
+
+        .item {
+            padding: 0 0 1em; border-bottom: 1px solid #e1e6ed;
+            margin-top: 1em;
+
+            p {margin: 0;}
+            a {color: @color-Hh; font-weight: 500; text-decoration: none;}
+            .date {font-size: 0.75rem; margin-top: 0.6em;}
+        }
+    }
 }
 
 .paginator {
@@ -489,8 +508,7 @@ main {
         display:inline-block;
         padding: 0 1em; margin-right: 0.5em; margin-bottom: 0.5em;
         width: 46px; height: 46px; line-height: 46px;
-        background: @color-bg;
-        border-radius: @brd-radius;
+        .block-light;
         text-align: center;
         transition: background-color 0.2s ease,
                     color 0.2s ease;
@@ -502,3 +520,4 @@ main {
         span.disable,
         span.more {color:@color-text; background: @color-bg;}
 }
+

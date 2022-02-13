@@ -14,6 +14,9 @@
     background: #fff; 
     border-radius: @brd-radius 0 0 @brd-radius;
 }
+.block-light {
+    background: @color-bg; border-radius: @brd-radius;
+}
 .bxshad() {box-shadow: 0 10px 13px rgba(0,52,169,0.13);}
 // end mixin
 
@@ -175,7 +178,14 @@ main {
             .descr, a {font-size: 0.75rem;}
         }
     }
+    
+    /* news */
+    .index .index_news_side {padding-left: 20px;}
+    .index .box-news_list_chapter {
+        margin-top: 0; padding: 30px;
 
+        h3 {margin-top: 0; margin-bottom: 1.5em;}
+    }
 }
 
 
