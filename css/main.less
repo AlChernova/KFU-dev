@@ -42,11 +42,7 @@ body {
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;    
 }
-a {
-    color: @color-primary;
-
-    &:hover {color: @color-second;}
-}
+a {color: @color-primary;}
 h1, h2, h3, h4 {color: @color-Hh; line-height: 1.2em;}
 h1 {font-size: 1.5rem; font-weight: 600; margin: 0 0 1em;}
 h2 {font-size: 1.4rem; font-weight: 300; margin: 1em 0 0.5em;}
@@ -227,11 +223,42 @@ header {
     }
 }
 footer {
-    background: @color-primary;
+    background: @color-primary; padding: 30px 0;
     color:#fff; font-family: 'Gilroy', Verdana, Arial, sans-serif;
+    font-size: 90%;
 
     a {color: #cdcccc; text-decoration: none;}
+
+    .logo a {
+        display: block; position: relative;
+        padding: 10px 0 0 51px; 
+        color: #fff; font-family: 'Montserrat', Verdana, Arial, sans-serif; font-size: 13px;
+        text-decoration:  none; line-height: 1.2em;
+
+        &::after {
+        content: "";
+        display: block; width: 41px; height: 50px;
+        position: absolute; top: 0; left: 0;
+        background: url(../images/logo.svg) no-repeat 0 0;
+        background-size: 100%;
+        }
+    }
+    .hotline {
+        padding: 1em 0; background: #001458; text-align: center;
+    }
+    .smallviews {
+        padding: 1em 0 0; font-size: 150%; text-transform: uppercase;
+        text-align: center;
+
+        a {text-decoration: underline; color: #fff;}
+    }
 }
+
+.box-nav-footer {
+    padding: 30px 0;
+    ul {list-style: none; margin: 0; padding: 0;}
+} 
+
 main {
     line-height: 1.5em; flex-grow: 1;
 
