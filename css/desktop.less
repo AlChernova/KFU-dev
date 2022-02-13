@@ -112,6 +112,13 @@ main {
             .container {width: 100%; padding-right: 30px;}
     }
     /* инд. блоки на главной */
+    .index_caption .block {
+        background-position: 100% 0;
+        background-size: auto 100%;
+        padding-top: 50px;
+        
+        .container {background: none; box-shadow: none;}
+    }
     .index_spectr {
         .col-xs-12:first-child {
             padding-right: 20px;
@@ -120,13 +127,13 @@ main {
             padding-left: 20px;
         }
     }
-    .index_caption .block {
-        background-position: 100% 0;
-        background-size: auto 100%;
-        padding-top: 50px;
-        
-        .container {background: none; box-shadow: none;}
+    #slider-teachers {
+        .slick-arrow {   
+            &.slick-prev {right: 90px;}
+            &.slick-next {right: 20px;}
+        }
     }
+
 }
 
 

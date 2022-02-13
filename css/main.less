@@ -345,7 +345,7 @@ main {
     & > section {
         margin-bottom: 25px; padding: 0 0 0 20px;     
     
-        .block {.white-block; padding-bottom: 30px;}
+        .block {.white-block; padding-bottom: 30px; padding-top: 30px;}
     }
     section h2 {padding: 0 20px;}
 
@@ -367,6 +367,17 @@ main {
                 &.slick-next {left: 70px}
             }
             .item img {width: 100%; max-width: 100%;}
+        }
+    }
+    
+    #slider-teachers {
+        padding-top: 70px;
+
+        .slick-arrow {
+            position: absolute; top: 0;
+    
+            &.slick-prev {right: 70px;}
+            &.slick-next {right: 0px;}
         }
     }
     .index .item_teacher {
