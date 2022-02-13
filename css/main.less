@@ -408,6 +408,29 @@ main {
             }
         }
     }
+    .index .box-type-programm {
+        width: 100%; overflow: auto; padding-bottom: 20px;
+
+        ul {
+            margin: 0; padding: 0;
+            display: flex; align-items: stretch;
+
+            li { 
+                display: flex;
+                padding: 0.5em 1em; margin: 0 20px 0 0;
+                background: @color-bg;
+                border-radius: @brd-radius;
+
+                &::before {display: none;}
+
+                a {
+                    display: block; margin: auto;
+                    color: @color-Hh; font-weight: 400;
+                    text-decoration: none; text-align: center;
+                }
+            }
+        }
+    }
     .index.news-list {
         .item {
             display: flex; justify-content: space-between; align-items: stretch;
