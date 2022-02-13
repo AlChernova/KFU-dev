@@ -329,6 +329,19 @@ main {
         }
     }
 
+    .slider .slick-arrow {
+        width: 40px; height: 40px; background: @color-bg;
+        border-radius: 50%; position: relative;
+
+        &::after {
+            .afbf-decor; top: 0; left: 0; width: 100%; height: 100%;
+            font-size: 24px; line-height: 40px; text-align: center;
+            transform: scaleX(0.7);
+        }
+        &.slick-prev::after {content: "<";}
+        &.slick-next::after {content: ">";}
+    }
+
     & > section {
         margin-bottom: 25px; padding: 0 0 0 20px;     
     
@@ -345,10 +358,32 @@ main {
     }
     .index_spectr {
         .slider {
+            padding-bottom: 70px;
+
+            .slick-arrow {
+                position: absolute; bottom: 0;
+
+                &.slick-prev {left: 0;}
+                &.slick-next {left: 70px}
+            }
             .item img {width: 100%; max-width: 100%;}
         }
     }
+    .index .item_teacher {
+        height: 430px; display: flex; flex-direction: column;
+        justify-content: space-between; background: @color-bg;
+        border-radius: @brd-radius;
+        width: 260px;
 
+        .img {
+            height: 305px; background-position: 50% 50%; 
+            background-repeat: no-repeat; background-size: cover;
+            border-radius: @brd-radius @brd-radius 0 0;
+        }
+        .title {
+            flex-grow: 1;
+        }
+    }
     .index.news-list {
         .item {
             display: flex; justify-content: space-between; align-items: stretch;

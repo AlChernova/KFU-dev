@@ -101,6 +101,11 @@ footer {
 main {
     margin-left: calc((100vw - @w-container) / 2);
 
+    .slider .slick-arrow:hover {
+        background: @color-primary;
+
+        &::after {color: #fff;}
+    }
     section > .block {
             padding: 50px calc((100vw - @w-container) / 2) 50px 30px;
 
