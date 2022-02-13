@@ -158,8 +158,9 @@ main {
         justify-content: flex-start;
 
         .img {
-            display: block;
-            height: 185px; background-position: 50% 50%; 
+            display: block; aspect-ratio: 7 / 6;
+            // height: 185px; 
+            background-position: 50% 50%; 
             background-repeat: no-repeat; background-size: cover;
             background-color: #d7d7d7;
             border-radius: @brd-radius @brd-radius 0 0;
@@ -394,6 +395,6 @@ main {
         // блоки главной
         .index .box-type-programms {padding-right: 0;}
         .index .box-type-programms ul {width: 70%;}
-        .index .item-program .img {height: 300px;}
+        .index .item-program .img {}
     }
 }
