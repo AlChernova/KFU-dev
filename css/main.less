@@ -373,15 +373,28 @@ main {
         height: 430px; display: flex; flex-direction: column;
         justify-content: space-between; background: @color-bg;
         border-radius: @brd-radius;
-        width: 260px;
+        // width: 260px;
 
         .img {
-            height: 305px; background-position: 50% 50%; 
+            height: 285px; background-position: 50% 50%; 
             background-repeat: no-repeat; background-size: cover;
             border-radius: @brd-radius @brd-radius 0 0;
         }
         .title {
-            flex-grow: 1;
+            height: 145px;
+            display: flex; flex-direction: column;
+            padding: 1em;
+            justify-content: space-between;
+            text-align: center; text-decoration: none;
+
+            .name {
+                
+                font-weight: 700; color: @color-Hh; font-size: 110%;
+            }
+            .position {
+                flex-grow: 1; padding-top: 1.5em;
+                font-size: 90%; color: @color-text;
+            }
         }
     }
     .index.news-list {
