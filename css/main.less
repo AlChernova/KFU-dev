@@ -46,6 +46,9 @@ body {
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;    
 }
+body.noscroll {
+    overflow: hidden; height: 100vh;
+}
 a {color: @color-primary;}
 h1, h2, h3, h4 {color: @color-Hh; line-height: 1.2em;}
 h1 {font-size: 1.5rem; font-weight: 600; margin: 0 0 1em;}
@@ -145,6 +148,7 @@ header {
         overflow: auto; padding: 1.5em 0;
         .bxshad; background: #fff; 
     
+        &.show {display: block;}
     }
     nav {
         font-size: 90%;
@@ -227,8 +231,9 @@ header {
 }
 .box-nav .user_menu {
     padding: 0 0 0 72px; font-size: 90%;
-    // display: none;
+    display: none;
 
+    &.show {display: block;}
     ul {
         list-style: none; margin: 0; padding: 0;
 

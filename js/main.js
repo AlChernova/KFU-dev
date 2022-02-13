@@ -4,7 +4,28 @@ WidthWin = $(window).width();
 $(document).ready(function () {
     $(document).on("click", ".mobile-nav .contact", function () {
         $(".box-contact").toggleClass("show");
+        $(".mobile-nav .hamburger").removeClass("active");
+        $("body").removeClass("noscroll");
+        $(".box-nav").removeClass("show");
     });
+    $(document).on("click", ".mobile-nav .hamburger", function () {
+        $(this).toggleClass("active");
+        $("body").toggleClass("noscroll");
+        $(".box-nav").toggleClass("show");
+        $(".box-contact").removeClass("show");
+        if ($(".user_menu").hasClass("show")) {
+            $(".user_menu").removeClass("show");
+        }
+    });
+    if (WidthWin < 600) {
+        $(document).on("click", ".box-nav .box-auth .user_setting", function () {
+            $(".user_menu").toggleClass("show");
+        });
+        $(document).on("click", "nav .has_level2 > a", function () {
+            $(this).next("ul").toggleClass("show");
+            
+        });
+    }
 
     // слайдер спектр возможностей
     if($("#widespektr").length) {
