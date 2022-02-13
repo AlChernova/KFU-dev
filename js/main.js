@@ -11,9 +11,6 @@ $(document).ready(function () {
             speed: 500,
             autoplay: false,
             autoplaySpeed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            responsive: [{breakpoint: 768, settings: {pauseOnHover: !1}}]
         });
 // END слайдер спектр возможностей
 
