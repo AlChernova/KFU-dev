@@ -15,6 +15,7 @@ button {border: none}
 @color-Hh: #1f1f1f;
 @color-bg: #f0f5fb;
 @color-second: #66001d;
+@color-footlink: #cdcccc;
 @brd-radius: 9px;
 @height-head: 63px;
 @w-container: 100%;
@@ -227,7 +228,7 @@ footer {
     color:#fff; font-family: 'Gilroy', Verdana, Arial, sans-serif;
     font-size: 90%;
 
-    a {color: #cdcccc; text-decoration: none;}
+    a {color: @color-footlink; text-decoration: none;}
 
     .logo a {
         display: block; position: relative;
@@ -243,6 +244,30 @@ footer {
         background-size: 100%;
         }
     }
+    .recvisits, address small {color: @color-footlink;}
+    .recvisits {padding: 1em 0 0; font-size: 85%;}
+    .adexe {font-size: 85%; font-weight: 700;}
+    .head-foot {
+        position: relative;
+        padding: 0 0 1em; margin-top: 0;
+        text-transform: uppercase; font-weight: 700;
+
+        &::after {
+            .afbf-decor;
+            width: calc(100% + 2em); left: -1em; top: 100%;
+            height: 2px; background: #001458;
+        }
+        a {color: #fff;}
+    }
+    address {
+        font-style: normal; margin-bottom: 3em;
+
+        p {
+            font-weight: 700;
+            small {font-weight: 400;}
+        }
+        a {color: #fff;}
+    }
     .hotline {
         padding: 1em 0; background: #001458; text-align: center;
     }
@@ -255,7 +280,7 @@ footer {
 }
 
 .box-nav-footer {
-    padding: 30px 0;
+    padding: 20px 0 30px;
     ul {list-style: none; margin: 0; padding: 0;}
 } 
 
