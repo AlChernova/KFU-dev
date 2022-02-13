@@ -408,8 +408,8 @@ main {
             }
         }
     }
-    .index .box-type-programm {
-        width: 100%; overflow: auto; padding-bottom: 20px;
+    .index .box-type-programms {
+        overflow: auto; padding-bottom: 20px;
 
         ul {
             margin: 0; padding: 0;
@@ -420,13 +420,20 @@ main {
                 padding: 0.5em 1em; margin: 0 20px 0 0;
                 background: @color-bg;
                 border-radius: @brd-radius;
+                transition: background-color 0.2s ease;
 
                 &::before {display: none;}
 
-                a {
+                button {
                     display: block; margin: auto;
                     color: @color-Hh; font-weight: 400;
                     text-decoration: none; text-align: center;
+                    background: none;
+                }
+
+                &.active {
+                    background: @color-primary;
+                    button {color: #fff;}
                 }
             }
         }

@@ -21,6 +21,7 @@ $(document).ready(function () {
             ]
         });
     }
+// END слайдер спектр возможностей    
     if($("#slider-teachers").length) {
         $("#slider-teachers").slick({
             dots: false,
@@ -55,6 +56,25 @@ $(document).ready(function () {
             ]
         });
     }
-// END слайдер спектр возможностей
+// END слайдер переподы 
+    if($("#slider-programs").length) {
+        var $buttons = $('.type-programs button').click(function() {
+            $('#slider-programs').slick('slickGoTo', $buttons.index(this));
+          });
+        $('#slider-programs').on('init beforeChange', function(e, slick, currSlide, nextSlide) {
+            $buttons
+              .parent().removeClass('active')
+              .eq(e.type === 'init' ? slick.currentSlide : nextSlide)
+              .addClass('active');
+        });
+        $("#slider-programs").slick({
+            dots: false,
+            arrows: false,
+            infinite: false,
+            speed: 500,
+            autoplay: false,
+            adaptiveHeight: true
+        });
+    }
 
 });
