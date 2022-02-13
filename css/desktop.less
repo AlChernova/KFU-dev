@@ -133,6 +133,48 @@ main {
             &.slick-next {right: 20px;}
         }
     }
+    /* program */
+    .index .box-type-programms {
+        padding-bottom: 0; padding-right: 20px;
+
+        ul {
+            display: block;
+
+            li {
+                margin: 0 0 20px; padding: 1em;
+
+                button {width: 100%; text-align: left;}
+            }
+        }
+    }
+
+    .index .list-programs {
+        display: flex; flex-wrap: wrap; justify-content: space-between;
+        align-content: stretch;
+    }
+    .index .item-program {
+        margin: 0 0 30px; width: 31%;
+        display: flex; flex-direction: column;
+        justify-content: flex-start;
+
+        .img {
+            display: block;
+            height: 185px; background-position: 50% 50%; 
+            background-repeat: no-repeat; background-size: cover;
+            background-color: #d7d7d7;
+            border-radius: @brd-radius @brd-radius 0 0;
+        }
+
+        .box-descr {
+            display: flex; flex-direction: column;
+            justify-content: flex-start;
+            padding: 1em;
+
+            h3 {font-size: 1rem;}
+            .descr {}
+            a {}
+        }
+    }
 
 }
 
