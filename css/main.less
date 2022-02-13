@@ -92,17 +92,29 @@ header {
         color: @color-Hh;
 
         a {font-size: 120%; font-weight: 400; text-decoration: none;}
+
+        &.show {
+            display: block;
+        }
     }
     .mobile-nav {
         display: flex; justify-content: flex-end; align-items: center;
         margin-top: 12px;
 
         button {
-            background: #fff; border-radius: 50%;
-            width: 37px; height: 37px; color: @color-primary;
+            position: relative;width: 37px; height: 37px;
             margin-left: 10px;
+            background: #fff; border-radius: 50%;
+            color: @color-primary;
 
             &.lang {font-weight: 400;}
+            &.contact::after {
+                .afbf-decor; width: 10px; height: 14px;
+                top: 50%; left: 50%;
+                transform: translate(-6px, -7px);
+                background: url('../images/sprite.png') no-repeat -96px 0;
+                background-size: 110px 23px;
+            }
         }
     }
     .hamburger {
@@ -479,7 +491,7 @@ main {
                             width: 20px; height: 20px;
                             background: url('../images/sprite.png') no-repeat 0 0;
                             background-size: 110px 23px;
-                            transform: translateY(-10px);
+                            transform: translateY(-50%);
                         }
                     }
                     .chapter {
@@ -489,15 +501,14 @@ main {
                     }
                     .date::after {
                         background-position: -23px 0; height: 21px;
-                        transform: translateY(-11px);
                     }
                     .n_views::after {
                         background-position: -45px 0; width: 25px;
-                        height: 13px; transform: translateY(-7px);
+                        height: 13px;
                     }
                     .n_comm::after {
                         background-position: -74px 0;
-                        height: 19px; transform: translateY(-9px);
+                        height: 19px;
                     }
                 }
             }

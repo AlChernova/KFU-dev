@@ -18,6 +18,7 @@
     background: @color-bg; border-radius: @brd-radius;
 }
 .bxshad() {box-shadow: 0 10px 13px rgba(0,52,169,0.13);}
+.afbf-decor() {display: block; content:""; position: absolute;}
 // end mixin
 
 body {padding: @height-head + @height-nav 0 0;}
@@ -59,12 +60,29 @@ header {
     .box-contact {
         position: static; display: flex;
         justify-content: flex-end; align-items: center;
-        background: none; padding: 0;
+        background: none; padding: 14px 0 0;
         color: #fff; font-size: 90%;
 
         a {color: #fff;}
 
-        p {margin-right: 30px;}
+        p {
+            margin: 0 30px 0 0; position: relative; padding-left: 55px;
+            
+            &::before {
+                .afbf-decor; width: 37px; height: 37px;
+                top: 50%; left: 0;
+                transform: translateY(-50%);
+                background: #fff; border-radius: 50%;
+            }
+            &::after {
+                .afbf-decor; width: 10px; height: 14px;
+                top: 50%; left: 13px;
+                transform: translateY(-50%);
+                background: url('../images/sprite.png') no-repeat -96px 0;
+                background-size: 110px 23px;
+            }
+
+        }
     }
 
     .mobile-nav button:not(.lang) {display: none;}
@@ -147,7 +165,24 @@ main {
             li {
                 margin: 0 0 20px; padding: 1em;
 
-                button {width: 100%; text-align: left;}
+                button {
+                    width: 100%; text-align: left; position: relative;
+                    padding-left: 45px;
+
+                    &::before, &::after {
+                        .afbf-decor; width: 32px; height: 32px;left: 0;
+                        top: 50%;
+                    }
+                    &::before {
+                        transform: translateY(-50%);
+                         background: #fff; border-radius: 6px;
+                    }
+                    &::after{
+                        content: ">"; line-height: 32px; text-align: center;
+                        color: #a8b0ba; font-size: 16px; font-weight: 400;
+                        transform: translateY(-50%) scaleX(0.7);
+                    }
+                }
 
                 &:hover {background: @color-primary; 
                     
@@ -214,7 +249,9 @@ main {
         }
     }    
 }
-
+.paginator a:hover span {
+    background: @color-primary; color: #fff;
+}
 
 @media (min-width:1300px){
     @w-container:1200px;
@@ -393,7 +430,7 @@ main {
                 &::after {font-size: 14px; padding-top: 48px;} 
             }
         }
-        .box-contact {padding-top: 22px;}
+        .box-contact {padding-top: 32px;}
         .mobile-nav {margin-top: 28px;}
     }
     .box-nav {

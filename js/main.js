@@ -2,6 +2,10 @@ var WidthWin;
 WidthWin = $(window).width();
 
 $(document).ready(function () {
+    $(document).on("click", ".mobile-nav .contact", function () {
+        $(".box-contact").toggleClass("show");
+    });
+
     // слайдер спектр возможностей
     if($("#widespektr").length) {
         $("#widespektr").slick({
