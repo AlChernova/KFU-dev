@@ -73,7 +73,8 @@ $(document).ready(function () {
             infinite: false,
             speed: 500,
             autoplay: false,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            fade: true
         });
     }
 
