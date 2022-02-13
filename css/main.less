@@ -456,20 +456,28 @@ main {
     .index.news-list {
         .item {
             display: flex; justify-content: space-between; align-items: stretch;
+            position: relative; background: @color-bg; border-radius: @brd-radius;
+            margin-bottom: 30px;
 
-            .img {
-                line-height: 0; font-size: 0;
-                width: 30%; 
-
-                img {width: 100%; max-width: 100%;}
-            }
+            .img {display: none}
             .content {
-                width: 70%;
+                padding: 20px;
 
+                .descr {font-size: 85%;}
                 .features {
-                    display: flex;
+                    display: flex; font-size: 0.75rem;
+                    flex-wrap: wrap;
+
+                    > div {
+                        background: #fff; border-radius: 5px; margin-right: 5px;
+                        padding: 5px;
+                    }
+                    .chapter {
+                        width: 100%; margin-bottom: 5px;
+
+                        a {display: block; color: @color-text; text-decoration: none;}
+                    }
                 }
-                .chapter {margin-right: auto;}
             }
 
         }
