@@ -89,16 +89,12 @@ header {
         }
     }
     .box-contact {
-        display: none;
         position: absolute; top: @height-head; left: 0;
         background: #fff; width: 100%; padding: 1em;
         color: @color-Hh;
 
         a {font-size: 120%; font-weight: 400; text-decoration: none;}
 
-        &.show {
-            display: block;
-        }
     }
     .mobile-nav {
         display: flex; justify-content: flex-end; align-items: center;
@@ -141,14 +137,24 @@ header {
     width: 100%; z-index: 2;
 }
 @media (max-width: 600px) {
+    .box-contact {
+        .bxshad;
+        transform: translateY(-300px);
+        transition: transform 0.2s ease;
+        
+        &.show {
+            transform: translateY(0%);
+        }
+    }    
     .box-nav {
-        display: none;
         position: fixed; top: @height-head; left: 0;
         width: 100%; max-width: 360px; height: calc(100vh - @height-head);
         overflow: auto; padding: 1.5em 0;
         .bxshad; background: #fff; 
+        transform: translateX(-100%);
+        transition: transform 0.2s ease;
     
-        &.show {display: block;}
+        &.show {transform: translateX(0%);}
     }
     nav {
         font-size: 90%;
@@ -244,7 +250,7 @@ header {
     }
 }
 footer {
-    background: @color-primary; padding: 30px 0;
+    background: @color-primary; padding: 30px 0; margin-top: 30px;
     color:#fff; font-family: 'Gilroy', Verdana, Arial, sans-serif;
     font-size: 90%;
 
@@ -313,6 +319,7 @@ footer {
             li {
                 margin-top: 1em;
             }
+
         }
     }
     & > li > a {
@@ -392,7 +399,13 @@ main {
     
     #slider-teachers {
         padding-top: 70px;
-
+        
+        .slick-track {
+            display: flex; flex-wrap: nowrap; align-items: stretch;
+        }
+        .slick-slide {float: none; height: auto;}
+        .slick-slide > div,
+        .slick-slide > div > .item {height: 100%;}
         .slick-arrow {
             position: absolute; top: 0;
     
@@ -401,18 +414,18 @@ main {
         }
     }
     .index .item_teacher {
-        height: 430px; display: flex; flex-direction: column;
-        justify-content: space-between; 
+        height: 100%; display: flex; flex-direction: column;
+        justify-content: flex-start; 
         .block-light;
         // width: 260px;
 
         .img {
-            height: 285px; background-position: 50% 50%; 
+            height: 285px; flex: 0 0 auto;
+            background-position: 50% 50%; 
             background-repeat: no-repeat; background-size: cover;
             border-radius: @brd-radius @brd-radius 0 0;
         }
         .title {
-            height: 145px;
             display: flex; flex-direction: column;
             padding: 1em;
             justify-content: space-between;
@@ -518,6 +531,16 @@ main {
                 }
             }
 
+            &[class*="item_"]::after {
+                display: block; position: absolute;
+                top: -10px; right: 20px; padding: 0.5ex 1em;
+                border-radius: @brd-radius;
+                text-transform: uppercase; font-size: 12px; 
+                font-weight: 500; color: @color-Hh;
+                
+            }
+            &[class*="new"]::after {background: #fcd542; content: "Новое"}
+            &[class*="popular"]::after {background: #d8a0ff; content: "Популярное"}
         }
     }
     .index .box-news_list_chapter {

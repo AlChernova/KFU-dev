@@ -19,11 +19,17 @@ $(document).ready(function () {
     });
     if (WidthWin < 600) {
         $(document).on("click", ".box-nav .box-auth .user_setting", function () {
-            $(".user_menu").toggleClass("show");
+            $(".user_menu").slideToggle();
         });
         $(document).on("click", "nav .has_level2 > a", function () {
-            $(this).next("ul").toggleClass("show");
-            
+            $(this).parent("li").siblings("li").find("ul").slideUp();
+            $(this).next("ul").slideToggle();
+
+        });
+        $(document).on("click", ".nav-footer > li > a", function () {
+            $(".nav-footer li ul").slideUp();
+            $(this).next("ul").slideToggle();
+
         });
     }
 
