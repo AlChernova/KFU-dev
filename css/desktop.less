@@ -186,6 +186,27 @@ main {
 
         h3 {margin-top: 0; margin-bottom: 1.5em;}
     }
+
+    .index .news-list {
+        .item {
+            .img {
+                display: block; width: 40%;
+                border-radius: @brd-radius 0 0 @brd-radius;
+                background-position: 50% 50%; background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .content {
+                width: 60%; padding: 30px;
+
+                h4 {margin-top: 0;}
+                h4 a {color: @color-Hh; text-decoration: none;}
+
+                .features {
+                    .chapter {width: auto; margin-bottom: 0;}
+                }
+            }
+        }
+    }    
 }
 
 
@@ -405,6 +426,14 @@ main {
         // блоки главной
         .index .box-type-programms {padding-right: 0;}
         .index .box-type-programms ul {width: 70%;}
-        .index .item-program .img {}
+
+        .index .news-list {
+            .item {
+                margin-bottom: 40px;
+
+                .content {padding: 45px 30px 30px 40px;}
+                .content h4 {font-size: 20px;}
+            }
+        }
     }
 }

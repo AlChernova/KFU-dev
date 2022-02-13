@@ -472,12 +472,33 @@ main {
 
                     > div {
                         background: #fff; border-radius: 5px; margin-right: 5px;
-                        padding: 5px;
+                        padding: 5px 5px 5px 40px; position: relative;
+                        margin-top: 5px;
+
+                        &::after {
+                            .afbf-decor; top: 50%; left: 9px;
+                            width: 20px; height: 20px;
+                            background: url('../images/sprite.png') no-repeat 0 0;
+                            background-size: 110px 23px;
+                            transform: translateY(-10px);
+                        }
                     }
                     .chapter {
                         width: 100%; margin-bottom: 5px;
 
                         a {display: block; color: @color-text; text-decoration: none;}
+                    }
+                    .date::after {
+                        background-position: -23px 0; height: 21px;
+                        transform: translateY(-11px);
+                    }
+                    .n_views::after {
+                        background-position: -45px 0; width: 25px;
+                        height: 13px; transform: translateY(-7px);
+                    }
+                    .n_comm::after {
+                        background-position: -74px 0;
+                        height: 19px; transform: translateY(-9px);
                     }
                 }
             }
